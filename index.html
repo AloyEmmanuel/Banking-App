@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Horizons Banking App</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="p-4 font-fontFamily border-2 ">
+    <!-- Outer Container -->
+    <div class="grid grid-cols-1 lg:grid-cols-[16rem_minmax(0,1fr)]">
+      <aside id="primary-sidebar">
+        <button
+          id="close-sidebar"
+          type="button"
+          aria-label="Close navigation menu"
+        >
+          <i class="fa-solid fa-x"></i>
+        </button>
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i>
+            <a href="home.html">Home</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-chart-simple"></i>
+            <a href="Analytics.html">Analytics</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-file"></i>
+            <a href="Reports.html">Reports</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-gear"></i>
+            <a href="Setting.html">Setting</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main>
+        <header class="flex items-center w-full">
+          <button id="open-sidebar" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- Search and Profile image container -->
+          <div class="flex items-center w-full ml-2">
+            
+            <!-- Search and Icon Container -->
+            <div class="flex-1 relative">
+              <!-- Search Icon -->
+              <i
+                class="fa-solid fa-magnifying-glass inline-block absolute top-3 left-2"
+              ></i>
+              <!-- Search Input -->
+              <input
+                class="border border-gray-300 active:border-gray-300 w-full rounded-lg pl-9 p-2 outline-none"
+                type="search"
+                name="search"
+                placeholder="Search..."
+                id="search"
+              />
+            </div>
+
+            <!-- Profile image Container -->
+            <div class="ml-2">
+              <!-- Profile image -->
+              <img
+                class="w-myWidth h-myHeight rounded-myCircle"
+                src="images/nature.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </header>
+
+        <!-- Main Contents -->
+        <div>
+          <!-- Greeting -->
+          <div class="mt-4">
+            <h1 class="text-2xl font-bold">
+              Good Morning, <span class="text-myText-color">Immi!</span>
+            </h1>
+            <p class="text-sm text-eyebrown font-semibold">
+              Here's what's happening with your business today.
+            </p>
+          </div>
+
+          <!-- Stat Cards-->
+          <div class="flex gap-4 mt-4 flex-col md:flex-row md:justify-between">
+            <!-- Stat Card 1 -->
+            <div class="stats-cards">
+              <p class="text-mySize text-myText-color font-bold">Total Sales</p>
+              <p class="font-bold text-lg">$12,560</p>
+              <p class="text-green-400 font-bold">↑ 12%</p>
+            </div>
+
+            <!-- Stat Card 2 -->
+            <div class="stats-cards">
+              <p class="text-mySize text-myText-color font-bold">Total Users</p>
+              <p class="font-bold text-lg">8600</p>
+              <p class="text-green-400 font-bold">↑ 8%</p>
+            </div>
+
+            <!-- Stat Card 3 -->
+            <div class="stats-cards">
+              <p class="text-mySize text-myText-color font-bold">New Orders</p>
+              <p class="font-bold text-lg">480</p>
+              <p class="text-green-400 font-bold">↑ 15%</p>
+            </div>
+
+            <!-- Stat Card 4 -->
+            <div class="stats-cards">
+              <p class="text-mySize text-myText-color font-bold">
+                Conversion rate
+              </p>
+              <p class="font-bold text-lg">4.8%</p>
+              <p class="text-green-400 font-bold">↑ 2%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Graph -->
+        <div class="cards mt-4"></div>
+
+        <div class="cards mt-4">
+          <div class="flex justify-between">
+            <h2 class="text-lg font-bold">Recent Orders</h2>
+            <p class="text-myText-color font-bold text-sm">View all</p>
+          </div>
+
+          <table class="">
+            <thead>
+              <tr class="bg-tableRow text-left">
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Ayesha Khan</td>
+                <td>Laptop</td>
+                <td>$450</td>
+                <td>Pending</td>
+              </tr>
+
+              <tr>
+                <td>Hina ali</td>
+                <td>Headphones</td>
+                <td>$89</td>
+                <td>Shipped</td>
+              </tr>
+
+              <tr>
+                <td>Mujeeb akhtar</td>
+                <td>Watch</td>
+                <td>$50</td>
+                <td>Delivered</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
